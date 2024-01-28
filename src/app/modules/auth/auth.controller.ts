@@ -3,7 +3,7 @@ import { StatusCodes } from 'http-status-codes';
 import config from '../../../config';
 import { catchAsync } from '../../../shared/catchAsync';
 import { sendResponse } from '../../../shared/sendResponse';
-import { ILoginResponse, IRefreshToken } from './auth.interface';
+import { ILoginResponse } from './auth.interface';
 import { AuthServices } from './auth.services';
 
 const loginUser = catchAsync(async (req: Request, res: Response) => {
@@ -16,6 +16,7 @@ const loginUser = catchAsync(async (req: Request, res: Response) => {
       secure: config.env === 'production',
       httpOnly: true,
    };
+   res.cookie('accessToken', result?.accessToken, cookieOptions);
    res.cookie('refreshToken', result?.refreshToken, cookieOptions);
 
    if (result?.refreshToken) {
@@ -39,12 +40,17 @@ const refreshToken = catchAsync(async (req: Request, res: Response) => {
       secure: config.env === 'production',
       httpOnly: true,
    };
-   res.cookie('refreshToken', result?.accessToken, cookieOptions);
+   res.cookie('accessToken', result?.accessToken, cookieOptions);
+   res.cookie('refreshToken', result?.refreshToken, cookieOptions);
 
-   sendResponse<IRefreshToken>(res, {
+   if (result?.refreshToken) {
+      delete result?.refreshToken;
+   }
+
+   sendResponse<ILoginResponse>(res, {
       statusCode: StatusCodes.OK,
       success: true,
-      message: 'User logged successfully..!!',
+      message: 'Get refresh token successfully..!!',
       data: result,
    });
 });
@@ -62,8 +68,19 @@ const changePassword = catchAsync(async (req: Request, res: Response) => {
    });
 });
 
+const logout = catchAsync(async (req: Request, res: Response) => {
+   res.cookie('accessToken', '');
+   res.cookie('refreshToken', '');
+   sendResponse(res, {
+      statusCode: 200,
+      success: true,
+      message: 'Logout successfully',
+   });
+});
+
 export const AuthController = {
    loginUser,
    refreshToken,
+   logout,
    changePassword,
 };

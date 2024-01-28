@@ -5,12 +5,7 @@ import config from '../../../config';
 import ApiError from '../../../errors/ApiError';
 import { jwtHelpers } from '../../../helpers/jwtHelpers';
 import { User } from '../user/user.model';
-import {
-   IChangePassword,
-   ILoginResponse,
-   ILoginUser,
-   IRefreshToken,
-} from './auth.interface';
+import { IChangePassword, ILoginResponse, ILoginUser } from './auth.interface';
 
 const loginUser = async (
    payload: ILoginUser
@@ -34,13 +29,13 @@ const loginUser = async (
 
    // create access token
    const accessToken = jwtHelpers.createToken(
-      { email, role: isUserExist?.role },
+      { id: isUserExist?._id, email, role: isUserExist?.role },
       config.jwt.secret_token as Secret,
       config.jwt.secret_expires as string
    );
 
    const refreshToken = jwtHelpers.createToken(
-      { email, role: isUserExist?.role },
+      { id: isUserExist?._id, email, role: isUserExist?.role },
       config.jwt.refresh_token as Secret,
       config.jwt.refresh_expires as string
    );
@@ -52,7 +47,7 @@ const loginUser = async (
    return null;
 };
 
-const refreshToken = async (token: string): Promise<IRefreshToken | null> => {
+const refreshToken = async (token: string): Promise<ILoginResponse | null> => {
    let verifiedToken = null;
    try {
       verifiedToken = jwtHelpers.verifyToken(
@@ -74,14 +69,22 @@ const refreshToken = async (token: string): Promise<IRefreshToken | null> => {
 
    //generate new token
 
-   const newAccessToken = jwtHelpers.createToken(
-      { email, role: isUserExist.role },
+   // create access token
+   const accessToken = jwtHelpers.createToken(
+      { id: isUserExist?._id, email, role: isUserExist?.role },
       config.jwt.secret_token as Secret,
       config.jwt.secret_expires as string
    );
 
+   const refreshToken = jwtHelpers.createToken(
+      { id: isUserExist?._id, email, role: isUserExist?.role },
+      config.jwt.refresh_token as Secret,
+      config.jwt.refresh_expires as string
+   );
+
    return {
-      accessToken: newAccessToken,
+      accessToken,
+      refreshToken,
    };
 };
 

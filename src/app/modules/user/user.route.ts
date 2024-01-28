@@ -15,8 +15,13 @@ router.post(
    UserControler.createUser
 );
 router.get(
+   '/:id',
+   auth(USER_ROLE.ADMIN, USER_ROLE.USER),
+   UserControler.getSingleUser
+);
+router.get(
    '/',
-   auth(USER_ROLE.ADMIN, USER_ROLE.STUDENT),
+   auth(USER_ROLE.ADMIN, USER_ROLE.USER),
    UserControler.getAllUsers
 );
 

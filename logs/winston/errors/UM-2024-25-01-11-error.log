@@ -1,0 +1,4 @@
+[LWC] error: Global error handler  E11000 duplicate key error collection: mentalHealth.users index: nidOrBirthNumber_1 dup key: { nidOrBirthNumber: null } (Thu Jan 25 2024 11:58:53 }) 
+[LWC] error: Global error handler  E11000 duplicate key error collection: mentalHealth.users index: nidOrBirthNumber_1 dup key: { nidOrBirthNumber: null } (Thu Jan 25 2024 11:59:9 }) 
+[LWC] error: Global error handler  E11000 duplicate key error collection: mentalHealth.users index: nidOrBirthNumber_1 dup key: { nidOrBirthNumber: null } (Thu Jan 25 2024 11:59:10 }) 
+[LWC] error: Global error handler  E11000 duplicate key error collection: mentalHealth.users index: nidOrBirthNumber_1 dup key: { nidOrBirthNumber: null } (Thu Jan 25 2024 11:59:11 }) 

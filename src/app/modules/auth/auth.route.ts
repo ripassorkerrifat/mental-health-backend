@@ -16,14 +16,19 @@ router.post(
 router.post(
    '/refresh-token',
    validateRequest(AuthValidation.createRefreshTokenZodSchema),
-   auth(USER_ROLE.ADMIN, USER_ROLE.STUDENT),
+   auth(USER_ROLE.ADMIN, USER_ROLE.USER),
    AuthController.refreshToken
+);
+router.get(
+   '/logout',
+   auth(USER_ROLE.ADMIN, USER_ROLE.USER),
+   AuthController.logout
 );
 
 router.post(
    '/change-password',
    validateRequest(AuthValidation.changePasswordZodSchema),
-   auth(USER_ROLE.ADMIN, USER_ROLE.STUDENT),
+   auth(USER_ROLE.ADMIN, USER_ROLE.USER),
    AuthController.changePassword
 );
 

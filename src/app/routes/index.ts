@@ -1,3 +1,4 @@
+import { MoodRoutes } from './../modules/mood/mood.route';
 import express from 'express';
 import { AuthRoutes } from '../modules/auth/auth.route';
 import { UserRoutes } from '../modules/user/user.route';
@@ -13,6 +14,10 @@ const moduleRoutes = [
    {
       path: '/auth',
       routes: AuthRoutes,
+   },
+   {
+      path: '/mood',
+      routes: MoodRoutes,
    },
 ];
 

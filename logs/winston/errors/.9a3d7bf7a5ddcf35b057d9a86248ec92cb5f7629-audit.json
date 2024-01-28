@@ -1,0 +1,45 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/errors/.9a3d7bf7a5ddcf35b057d9a86248ec92cb5f7629-audit.json",
+    "files": [
+        {
+            "date": 1706162321304,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/errors/UM-2024-25-01-11-error.log",
+            "hash": "41faeb9d1abd9c50d9603a40440a398d4f691e10d72ff0bdf10080da877224fb"
+        },
+        {
+            "date": 1706162422021,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/errors/UM-2024-25-01-12-error.log",
+            "hash": "df9f29e9523a5e27a01bec88151a8ec25a473e51f75cf924167fe6da045bba15"
+        },
+        {
+            "date": 1706333701054,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/errors/UM-2024-27-01-11-error.log",
+            "hash": "eaf0a1edbbbe4d32fe2770dfd1bd8fbee58cd03e2a771ac4ab0d7cf525f735d4"
+        },
+        {
+            "date": 1706345158772,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/errors/UM-2024-27-01-14-error.log",
+            "hash": "debf05663b99389d89b5d7a64e8d287c077be0766b7e4e4f39baa69951296135"
+        },
+        {
+            "date": 1706413126047,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/errors/UM-2024-28-01-09-error.log",
+            "hash": "affc4d1f508cb66a835f827f5d3ec3cc80c0f44fd906a802dcad43707367a9aa"
+        },
+        {
+            "date": 1706426360202,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/errors/UM-2024-28-01-13-error.log",
+            "hash": "06237073501113271f44ed82bb5cde892bc06a0280ed1aa1365b3a4fd13b1ab9"
+        },
+        {
+            "date": 1706430927511,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/errors/UM-2024-28-01-14-error.log",
+            "hash": "3cf3ff3e65968aacd7e89cf21510d5fce8d7af3d76559a59e75f448072061523"
+        }
+    ],
+    "hashType": "sha256"
+}

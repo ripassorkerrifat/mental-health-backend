@@ -1,0 +1,45 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/successes/.4d107231ad49e1397a6d5181faee68d486ebe17b-audit.json",
+    "files": [
+        {
+            "date": 1706162321298,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/successes/UM-2024-25-01-11-success.log",
+            "hash": "f088cd598e5c0783d3294b37f9d4904d644d25741cfa5661a2d2c1cfed9513b2"
+        },
+        {
+            "date": 1706162422018,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/successes/UM-2024-25-01-12-success.log",
+            "hash": "d6f18f94d3a4cf22c92b0427e3974e6e26acbfcb0992c8b4c34fa57ced4af33b"
+        },
+        {
+            "date": 1706333701048,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/successes/UM-2024-27-01-11-success.log",
+            "hash": "ecf5a659f509e03f1cf371303174aba35f3e40efe0d0b217c4ae14485314873d"
+        },
+        {
+            "date": 1706345369651,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/successes/UM-2024-27-01-14-success.log",
+            "hash": "bc1556b9364d7009056779d6d98fdd185a0cf987099bd84f0a9092a832d688ba"
+        },
+        {
+            "date": 1706413126040,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/successes/UM-2024-28-01-09-success.log",
+            "hash": "56458cd8a487b196523aae1d6d4c433c253ef82924e6d1b73a02e641380b9122"
+        },
+        {
+            "date": 1706426360194,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/successes/UM-2024-28-01-13-success.log",
+            "hash": "7ad1dd0b9b204839a38e0a0dc04c3ddc650d94f41302d0a7963dcb69d0b4732e"
+        },
+        {
+            "date": 1706430927500,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/successes/UM-2024-28-01-14-success.log",
+            "hash": "3e9e59fd949a4b8fbc9a99483703f9d681cf621ecb8ebddc391f5bc34ebee58b"
+        }
+    ],
+    "hashType": "sha256"
+}

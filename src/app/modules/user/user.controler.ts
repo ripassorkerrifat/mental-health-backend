@@ -6,10 +6,7 @@ import { IUser } from './user.interface';
 import { UserServices } from './user.services';
 
 const createUser = catchAsync(async (req: Request, res: Response) => {
-   //
-   const payload = req.body;
-
-   const result = await UserServices.createUser(payload);
+   const result = await UserServices.createUser(req.body);
 
    sendResponse<IUser>(res, {
       statusCode: StatusCodes.OK,
@@ -18,10 +15,18 @@ const createUser = catchAsync(async (req: Request, res: Response) => {
       data: result,
    });
 });
+const getSingleUser = catchAsync(async (req: Request, res: Response) => {
+   const result = await UserServices.getSingleUser(req.params.id);
+
+   sendResponse<IUser>(res, {
+      statusCode: StatusCodes.OK,
+      success: true,
+      message: 'User fetch successfully..!!',
+      data: result,
+   });
+});
 const getAllUsers = catchAsync(async (req: Request, res: Response) => {
    const result = await UserServices.getAllUsers();
-
-   console.log(req.user);
 
    sendResponse<IUser[]>(res, {
       statusCode: StatusCodes.OK,
@@ -33,5 +38,6 @@ const getAllUsers = catchAsync(async (req: Request, res: Response) => {
 
 export const UserControler = {
    createUser,
+   getSingleUser,
    getAllUsers,
 };
