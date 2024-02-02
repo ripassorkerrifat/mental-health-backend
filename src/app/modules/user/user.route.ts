@@ -14,6 +14,8 @@ router.post(
    validateRequest(UserValidation.createUserZodSchema),
    UserControler.createUser
 );
+router.post('/chat-with-ai/:id', UserControler.createChatMsg);
+router.delete('/chat-with-ai/:id', UserControler.clearChatMsg);
 router.get(
    '/:id',
    auth(USER_ROLE.ADMIN, USER_ROLE.USER),

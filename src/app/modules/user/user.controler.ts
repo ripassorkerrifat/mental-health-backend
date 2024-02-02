@@ -36,8 +36,30 @@ const getAllUsers = catchAsync(async (req: Request, res: Response) => {
    });
 });
 
+const createChatMsg = catchAsync(async (req: Request, res: Response) => {
+   const result = await UserServices.createChatMsg(req.params.id, req.body);
+
+   sendResponse<IUser>(res, {
+      statusCode: StatusCodes.OK,
+      success: true,
+      message: 'Create message successfully..!!',
+      data: result,
+   });
+});
+const clearChatMsg = catchAsync(async (req: Request, res: Response) => {
+   const result = await UserServices.clearChatMsg(req.params.id);
+
+   sendResponse<IUser>(res, {
+      statusCode: StatusCodes.OK,
+      success: true,
+      message: 'Clear chat message successfully..!!',
+      data: result,
+   });
+});
 export const UserControler = {
    createUser,
    getSingleUser,
    getAllUsers,
+   createChatMsg,
+   clearChatMsg,
 };

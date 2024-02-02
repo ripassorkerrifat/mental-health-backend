@@ -2,6 +2,7 @@ import { MoodRoutes } from './../modules/mood/mood.route';
 import express from 'express';
 import { AuthRoutes } from '../modules/auth/auth.route';
 import { UserRoutes } from '../modules/user/user.route';
+import { JournalRoutes } from '../modules/journal/journal.routes';
 
 const router = express.Router();
 
@@ -18,6 +19,10 @@ const moduleRoutes = [
    {
       path: '/mood',
       routes: MoodRoutes,
+   },
+   {
+      path: '/journal',
+      routes: JournalRoutes,
    },
 ];
 

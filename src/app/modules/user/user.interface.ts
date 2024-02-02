@@ -6,6 +6,7 @@ export type IUser = {
    email: string;
    password: string;
    avatar?: string;
+   chat?: [];
 };
 
 export type UserModel = Model<IUser, Record<string, unknown>>;

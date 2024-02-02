@@ -14,4 +14,8 @@ export default {
       refresh_token: process.env.JWT_REFRESH_TOKEN,
       refresh_expires: process.env.JWT_REFRESH_EXPIRE_IN,
    },
+   openai: {
+      org: process.env.OPEN_AI_ORG,
+      key: process.env.OPEN_AI_API_KEY,
+   },
 };

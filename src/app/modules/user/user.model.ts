@@ -5,6 +5,18 @@ import { Schema, model } from 'mongoose';
 import config from '../../../config';
 import { IUser, UserModel } from './user.interface';
 
+const chatSchema = new Schema(
+   {
+      role: {
+         type: String,
+      },
+      content: {
+         type: String,
+      },
+   },
+   { timestamps: true }
+);
+
 const userSchema = new Schema<IUser, UserModel>(
    {
       name: {
@@ -25,6 +37,10 @@ const userSchema = new Schema<IUser, UserModel>(
          required: true,
          select: 0,
       },
+      chat: {
+         type: [chatSchema],
+         default: [],
+      },
    },
    {
       timestamps: true,
@@ -34,12 +50,22 @@ const userSchema = new Schema<IUser, UserModel>(
    }
 );
 
+// userSchema.pre('save', async function (next) {
+//    let user = this;
+//    user.password = await bcrypt.hash(
+//       user.password,
+//       Number(config.bcrypt_salt_rounds)
+//    );
+//    next();
+// });
+
 userSchema.pre('save', async function (next) {
    let user = this;
-   user.password = await bcrypt.hash(
-      user.password,
-      Number(config.bcrypt_salt_rounds)
-   );
+   if (user.isModified('password')) {
+      // Check if password is modified
+      const saltRounds = Number(config.bcrypt_salt_rounds);
+      user.password = await bcrypt.hash(user.password, saltRounds);
+   }
    next();
 });
 
