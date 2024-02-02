@@ -1,3 +1,0 @@
-[LWC] error: Global error handler  User validation failed: chat.5.content: Cast to string failed for value "{ role: 'assistant', content: 'Hello! How can I assist you today?' }" (type Object) at path "content" (Fri Feb 02 2024 16:11:1 }) 
-[LWC] error: Global error handler  User validation failed: chat.5.content: Cast to string failed for value "{ role: 'assistant', content: 'Hello! How can I assist you today?' }" (type Object) at path "content" (Fri Feb 02 2024 16:11:20 }) 
-[LWC] error: Global error handler  User validation failed: chat.7.content: Cast to string failed for value "{ role: 'assistant', content: 'Hello! How can I assist you today?' }" (type Object) at path "content" (Fri Feb 02 2024 16:15:0 }) 
