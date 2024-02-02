@@ -38,7 +38,7 @@ const clearChatMsg = async (id: string): Promise<IUser | null> => {
       throw new ApiError(StatusCodes.NOT_FOUND, 'User not found');
    }
 
-   userExist.chat = []; // Reset the chat array to an empty array
+   userExist.chat = [];
 
    await userExist.save();
    return userExist;
