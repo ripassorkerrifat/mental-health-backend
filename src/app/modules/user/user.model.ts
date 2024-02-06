@@ -37,6 +37,11 @@ const userSchema = new Schema<IUser, UserModel>(
          required: true,
          select: 0,
       },
+      avatar: {
+         type: String,
+         required: true,
+      },
+
       chat: {
          type: [chatSchema],
          default: [],

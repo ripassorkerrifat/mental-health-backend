@@ -1,10 +1,11 @@
-import { Schema, model } from 'mongoose';
+import { Schema, Types, model } from 'mongoose';
 import { IJournal, JournalModel } from './journal.interface';
 
 const journalSchema = new Schema<IJournal, JournalModel>(
    {
-      userId: {
-         type: String,
+      user: {
+         type: Types.ObjectId,
+         ref: 'User',
          required: true,
       },
       title: {

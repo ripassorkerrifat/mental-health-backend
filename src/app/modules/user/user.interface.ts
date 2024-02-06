@@ -5,7 +5,7 @@ export type IUser = {
    role: string;
    email: string;
    password: string;
-   avatar?: string;
+   avatar: string;
    chat?: [];
 };
 

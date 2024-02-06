@@ -1,7 +1,8 @@
-import { Document, Model } from 'mongoose';
+import { Document, Model, ObjectId } from 'mongoose';
+import { IUser } from '../user/user.interface';
 
 export type IJournal = {
-   userId: string;
+   user: ObjectId | IUser;
    title: string;
    desc: string;
 } & Document;

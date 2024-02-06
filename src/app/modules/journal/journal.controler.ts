@@ -46,10 +46,21 @@ const getJournalByUser = catchAsync(async (req: Request, res: Response) => {
       data: result,
    });
 });
+const deleteJournal = catchAsync(async (req: Request, res: Response) => {
+   const result = await JournalServices.deleteJournal(req.params.id);
+
+   sendResponse(res, {
+      statusCode: StatusCodes.OK,
+      success: true,
+      message: 'Delete journal successfully..!!',
+      data: result,
+   });
+});
 
 export const JournalControler = {
    createJournal,
    gelAllJournal,
    getSingleJournal,
    getJournalByUser,
+   deleteJournal,
 };

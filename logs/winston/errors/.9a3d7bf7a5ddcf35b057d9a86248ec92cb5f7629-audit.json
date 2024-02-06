@@ -1,0 +1,40 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/errors/.9a3d7bf7a5ddcf35b057d9a86248ec92cb5f7629-audit.json",
+    "files": [
+        {
+            "date": 1706884351532,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/errors/UM-2024-02-02-20-error.log",
+            "hash": "af6d9b722746c5f61f4ae20f93e915d9da7d800b3c6607dff4ea0d66494bbc5d"
+        },
+        {
+            "date": 1706941065540,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/errors/UM-2024-03-02-12-error.log",
+            "hash": "1b25f413d49de36fc6b64c6b6451c0e0946258ca6ac7cf9f055272df3a3062e0"
+        },
+        {
+            "date": 1707192140996,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/errors/UM-2024-06-02-10-error.log",
+            "hash": "2f63e05d56eec7546e0bebbd9274894e0e7060f9c9e0f5564bae4b71d537dfff"
+        },
+        {
+            "date": 1707196317306,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/errors/UM-2024-06-02-11-error.log",
+            "hash": "b7fb5b27436b0183ece00908f75b49bdd227c64a9fb7b40ee68f4816b667ed6b"
+        },
+        {
+            "date": 1707202039403,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/errors/UM-2024-06-02-12-error.log",
+            "hash": "a42c6326c2dd4a35004cda841234bc87d3e7afab1a403a71ad2bbe509e58e414"
+        },
+        {
+            "date": 1707208046297,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/errors/UM-2024-06-02-14-error.log",
+            "hash": "6bb922dc2a741381370b7c9d6943233bed26022db809133dd3540297eacc2c52"
+        }
+    ],
+    "hashType": "sha256"
+}

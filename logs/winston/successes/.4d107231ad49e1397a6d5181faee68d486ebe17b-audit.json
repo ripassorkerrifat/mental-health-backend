@@ -1,0 +1,40 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/successes/.4d107231ad49e1397a6d5181faee68d486ebe17b-audit.json",
+    "files": [
+        {
+            "date": 1706884351528,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/successes/UM-2024-02-02-20-success.log",
+            "hash": "4c86ef76d0a6e4d82d84d8a49f757648a3a218a33a7320b2cc17c8ee71cc959b"
+        },
+        {
+            "date": 1706941065528,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/successes/UM-2024-03-02-12-success.log",
+            "hash": "32055c50f0c63e681944ff0c71a84771b20fb7b4d8c81b12c24bbbab777c5a51"
+        },
+        {
+            "date": 1707192140987,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/successes/UM-2024-06-02-10-success.log",
+            "hash": "1a2dafff53c5c92bb6b2a5ad425ca7b345c8bd8ff4791d1060db6f3a8500eaf8"
+        },
+        {
+            "date": 1707196317301,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/successes/UM-2024-06-02-11-success.log",
+            "hash": "a23754fdd88ea56baf73934dc5f5e3beee70e8684a4c34e4d2ec0a5cab8831b1"
+        },
+        {
+            "date": 1707202039398,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/successes/UM-2024-06-02-12-success.log",
+            "hash": "93e6fb42c623cd68f07591de1c22d2b8c53bceb7b396dc2ebbc983553a3744da"
+        },
+        {
+            "date": 1707208199839,
+            "name": "/home/rsr/My Computer/Devlopement/Client project/Mental healths/Backend/logs/winston/successes/UM-2024-06-02-14-success.log",
+            "hash": "b3c69e3a5816bec765fd48bf8c02fbb8b446cad68a796bf82d0e82f99edc4495"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,0 +1,2 @@
+[LWC] error: Global error handler  E11000 duplicate key error collection: mental_health.users index: email_1 dup key: { email: "pagolripas@gmail.com" } (Tue Feb 06 2024 14:27:26 }) 
+[LWC] error: Global error handler  E11000 duplicate key error collection: mental_health.users index: email_1 dup key: { email: "pagolripas@gmail.com" } (Tue Feb 06 2024 14:27:27 }) 
