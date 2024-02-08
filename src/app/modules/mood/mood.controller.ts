@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { catchAsync } from '../../../shared/catchAsync';
 import { sendResponse } from '../../../shared/sendResponse';
 import { StatusCodes } from 'http-status-codes';
-import { Imood } from './mood.interface';
+import { IWriteMood, Imood } from './mood.interface';
 import { MoodServices } from './mood.services';
 
 const createMood = catchAsync(async (req: Request, res: Response) => {
@@ -35,9 +35,55 @@ const getLastOne = catchAsync(async (req: Request, res: Response) => {
       data: result,
    });
 });
+const createWriteMood = catchAsync(async (req: Request, res: Response) => {
+   const result = await MoodServices.createWriteMood(req.body);
+
+   sendResponse<IWriteMood>(res, {
+      statusCode: StatusCodes.OK,
+      success: true,
+      message: 'Mood write by user successfully..!!',
+      data: result,
+   });
+});
+const getSingleWriteMood = catchAsync(async (req: Request, res: Response) => {
+   const result = await MoodServices.getSingleWriteMood(req.params.id);
+
+   sendResponse<IWriteMood>(res, {
+      statusCode: StatusCodes.OK,
+      success: true,
+      message: 'Get single write mood successfully..!!',
+      data: result,
+   });
+});
+const getWriteMoodByUser = catchAsync(async (req: Request, res: Response) => {
+   const result = await MoodServices.getWriteMoodByUser(req.params.id);
+
+   sendResponse<IWriteMood[]>(res, {
+      statusCode: StatusCodes.OK,
+      success: true,
+      message: 'Get all write mood by user successfully..!!',
+      data: result,
+   });
+});
+const deleteSingleWriteMood = catchAsync(
+   async (req: Request, res: Response) => {
+      const result = await MoodServices.deleteSingleWriteMood(req.params.id);
+
+      sendResponse<IWriteMood>(res, {
+         statusCode: StatusCodes.OK,
+         success: true,
+         message: 'Deleted successfully..!!',
+         data: result,
+      });
+   }
+);
 
 export const MoodControler = {
    createMood,
    getAllMoodByUser,
    getLastOne,
+   createWriteMood,
+   getSingleWriteMood,
+   getWriteMoodByUser,
+   deleteSingleWriteMood,
 };

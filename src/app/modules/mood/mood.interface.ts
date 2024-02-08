@@ -6,3 +6,18 @@ export type Imood = {
 } & Document;
 
 export type MoodModel = Model<Imood>;
+
+export type IWriteMood = {
+   userId: string;
+   mood: string;
+   stepFirst: [];
+   stepSecond: [];
+   stepThird: [];
+   stepFourth: [];
+   stepFifth: [];
+   stepSixth: [];
+   stepSeventh: [];
+   stepEighth: [];
+} & Document;
+
+export type WriteModel = Model<IWriteMood>;
