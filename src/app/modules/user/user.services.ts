@@ -25,9 +25,12 @@ const createChatMsg = async (
       throw new ApiError(StatusCodes.NOT_FOUND, 'User not found');
    }
 
-   if (payload?.data && Array.isArray(payload.data)) {
-      payload.data.forEach((element: any) => userExist.chat?.push(element));
-   }
+   await User.findByIdAndUpdate(
+      id,
+      { $push: { chat: payload.data } },
+      { new: true }
+   );
+
    await userExist.save();
    return userExist;
 };

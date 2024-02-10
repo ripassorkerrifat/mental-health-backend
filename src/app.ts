@@ -22,6 +22,10 @@ app.use('/api/v1', routes);
 // globalErrorHandler
 app.use(globalErrorHandler);
 
+app.get('/', (req, res) => {
+   res.send(`Server is running at 5000 port`);
+});
+
 //handle not found
 app.use((req: Request, res: Response, next: NextFunction) => {
    res.status(StatusCodes.NOT_FOUND).json({
