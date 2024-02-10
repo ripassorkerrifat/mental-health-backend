@@ -21,7 +21,7 @@ export const globalErrorHandler: ErrorRequestHandler = (
    //
    config.env === 'development'
       ? console.log('Global error handler -->', error)
-      : errorlogger.error('Global error handler ', error);
+      : console.error('Global error handler ', error);
 
    let statusCode = 500;
    let message = 'Something went worng.';

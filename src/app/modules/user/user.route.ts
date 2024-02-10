@@ -1,7 +1,4 @@
 import express from 'express';
-// import { validateRequest } from '../../middleware/validateRequest';
-// import { UserValidation } from './user.validation';
-import { USER_ROLE } from '../../../enums/user';
 import { auth } from '../../middleware/auth';
 import { validateRequest } from '../../middleware/validateRequest';
 import { UserControler } from './user.controler';
@@ -14,17 +11,9 @@ router.post(
    validateRequest(UserValidation.createUserZodSchema),
    UserControler.createUser
 );
-router.post('/chat-with-ai/:id', UserControler.createChatMsg);
-router.delete('/chat-with-ai/:id', UserControler.clearChatMsg);
-router.get(
-   '/:id',
-   auth(USER_ROLE.ADMIN, USER_ROLE.USER),
-   UserControler.getSingleUser
-);
-router.get(
-   '/',
-   auth(USER_ROLE.ADMIN, USER_ROLE.USER),
-   UserControler.getAllUsers
-);
+router.post('/chat-with-ai/:id', auth('user'), UserControler.createChatMsg);
+router.delete('/chat-with-ai/:id', auth('user'), UserControler.clearChatMsg);
+router.get('/:id', auth('user'), UserControler.getSingleUser);
+router.get('/', auth('user'), UserControler.getAllUsers);
 
 export const UserRoutes = router;

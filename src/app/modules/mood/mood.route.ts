@@ -1,18 +1,16 @@
 import express from 'express';
 import { MoodControler } from './mood.controller';
-
-// import { USER_ROLE } from '../../../enums/user';
-// import { auth } from '../../middleware/auth';
+import { auth } from '../../middleware/auth';
 
 const router = express.Router();
 
-router.post('/', MoodControler.createMood);
-router.get('/:id', MoodControler.getAllMoodByUser);
-router.get('/get-last/:id', MoodControler.getLastOne);
+router.post('/', auth('user'), MoodControler.createMood);
+router.get('/:id', auth('user'), MoodControler.getAllMoodByUser);
+router.get('/get-last/:id', auth('user'), MoodControler.getLastOne);
 
 // write mood routes
-router.post('/write', MoodControler.createWriteMood);
-router.get('/write/user/:id', MoodControler.getWriteMoodByUser);
-router.get('/write/:id', MoodControler.getSingleWriteMood);
-router.delete('/write/:id', MoodControler.deleteSingleWriteMood);
+router.post('/write', auth('user'), MoodControler.createWriteMood);
+router.get('/write/user/:id', auth('user'), MoodControler.getWriteMoodByUser);
+router.get('/write/:id', auth('user'), MoodControler.getSingleWriteMood);
+router.delete('/write/:id', auth('user'), MoodControler.deleteSingleWriteMood);
 export const MoodRoutes = router;
