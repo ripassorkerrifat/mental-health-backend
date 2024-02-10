@@ -10,7 +10,6 @@ import { handleCastError } from '../../errors/handleCastError';
 import { handleValidationError } from '../../errors/handleValidationError';
 import { handleZodError } from '../../errors/handleZodError';
 import { IGenericErrorMessageType } from '../../interface/IGenericErrorMessageType';
-import { errorlogger } from '../../shared/logger';
 
 export const globalErrorHandler: ErrorRequestHandler = (
    error,
