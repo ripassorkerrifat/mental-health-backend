@@ -14,6 +14,6 @@ router.post(
 router.post('/chat-with-ai/:id', auth('user'), UserControler.createChatMsg);
 router.delete('/chat-with-ai/:id', auth('user'), UserControler.clearChatMsg);
 router.get('/:id', auth('user'), UserControler.getSingleUser);
-router.get('/', auth('user'), UserControler.getAllUsers);
+router.get('/', UserControler.getAllUsers);
 
 export const UserRoutes = router;
