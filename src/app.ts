@@ -1,19 +1,24 @@
-import { StatusCodes } from 'http-status-codes';
-import express, { Application, NextFunction, Request, Response } from 'express';
+import cookieParser from 'cookie-parser';
 import cors from 'cors';
+import express, { Application, NextFunction, Request, Response } from 'express';
+import { StatusCodes } from 'http-status-codes';
 import { globalErrorHandler } from './app/middleware/globalErrorHandler';
 import routes from './app/routes';
-import cookieParser from 'cookie-parser';
 
 const app: Application = express();
 
 // cors
-app.use(cors({ origin: 'http://localhost:3000/' }));
-
-app.use((req, res, next) => {
-   res.header({ 'Access-Control-Allow-Origin': '*' });
-   next();
-});
+app.use(
+   cors({
+      origin: [
+         'http://localhost:3001',
+         'https://mental-health-ztr7.vercel.app',
+      ],
+      credentials: true,
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+      allowedHeaders: ['Content-Type', 'Authorization'],
+   })
+);
 // cockie perser
 app.use(cookieParser());
 
@@ -28,7 +33,7 @@ app.use('/api/v1', routes);
 app.use(globalErrorHandler);
 
 app.get('/', (req, res) => {
-   res.send(`Server is running at 5000 port`);
+   res.send(`Server is running at 4000 port`);
 });
 
 //handle not found
