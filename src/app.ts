@@ -13,6 +13,7 @@ app.use(
       origin: [
          'http://localhost:3001',
          'https://mental-health-ztr7.vercel.app',
+         'https://mental-health-olive.vercel.app/login',
       ],
       credentials: true,
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],

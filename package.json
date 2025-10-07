@@ -15,12 +15,16 @@
    "keywords": [],
    "author": "Ripas Sorker Rifat",
    "license": "ISC",
+   "engines": {
+      "node": ">=18.x"
+   },
    "lint-staged": {
       "src/**/*.ts": "yarn lint-prettier"
    },
    "devDependencies": {
       "@types/cors": "^2.8.13",
       "@types/express": "^4.17.17",
+      "@vercel/node": "^3.0.0",
       "@typescript-eslint/eslint-plugin": "^5.59.8",
       "@typescript-eslint/parser": "^5.59.8",
       "eslint": "^8.41.0",
