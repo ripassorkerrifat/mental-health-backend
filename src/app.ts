@@ -12,8 +12,7 @@ app.use(
    cors({
       origin: [
          'http://localhost:3001',
-         'https://mental-health-ztr7.vercel.app',
-         'https://mental-health-olive.vercel.app/login',
+         'https://mental-health-olive.vercel.app',
       ],
       credentials: true,
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
